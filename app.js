@@ -3,7 +3,7 @@ Vue.component('codermeals-card',{
         producto:Object
     },
     template:`<div align="center">
-        <img :src="producto.portada" :alt="producto.titulo">
+        <img height="200" :src="producto.portada" :alt="producto.titulo">
         <h3> {{producto.titulo}} </h3>
         <p>$ <b> {{producto.costo}} </b> </p>
         <button class="btn btn-success" @click="console(producto.id)">AGREGAR</button>
