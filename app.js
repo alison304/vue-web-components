@@ -1,4 +1,4 @@
-Vue.component('codermeals-card',{
+Vue.component('meals-card',{
     props:{
         producto:Object
     },
@@ -6,7 +6,7 @@ Vue.component('codermeals-card',{
         <img height="200" :src="producto.portada" :alt="producto.titulo">
         <h3> {{producto.titulo}} </h3>
         <p>$ <b> {{producto.costo}} </b> </p>
-        <button class="btn btn-success" @click="console(producto.id)">AGREGAR</button>
+        <button class="btn btn-success" @click="console(producto.id)">Me gusta</button>
     </div>`,
     methods:{
         console(id){
@@ -25,8 +25,6 @@ var app = new Vue({
         num:0,
         sum:10,
         style:'green bg-red',
-        text:'Hola coder',
-        html:'CoderHouse',
         list:[
             ['a','b','c'],
             ['d','e','f'],
@@ -34,14 +32,13 @@ var app = new Vue({
         ],
         classes:{
             'blue':true,
-            //'bg-red':true,
             'bold':true
         },
         styles:{
             'color':'red',
             'font-size':'32px'
         },
-        matesList:[
+        prodList:[
             {oferta:false,id:1,name:'Limón',width:20,height:50,price:10},
             {oferta:false,id:2,name:'Ají',width:16,height:45,price:9},
             {oferta:false,id:3,name:'Mayonesa',width:13,height:23,price:8},
@@ -49,7 +46,7 @@ var app = new Vue({
             {oferta:false,id:5,name:'Guacamole',width:10,height:42,price:7},
             {oferta:false,id:6,name:'Huancaina',width:30,height:32,price:8},
         ],
-        codermeals: [
+        meals: [
             {
                 id: 1,
                 titulo: "Pollo a la brasa",
